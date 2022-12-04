@@ -1,8 +1,8 @@
 # functions around smet class
 
 read_smet <- function(filename) {
-  tmp <- scan(filename, what = character(), nmax = 999,
-              sep = '\n', strip.white = TRUE, quiet = TRUE)
+  tmp <- readLines(filename, n = 999, warn = FALSE,
+              encoding = 'UTF-8')
   smet_version <- tmp[1]
 
   # determine line number of section headers

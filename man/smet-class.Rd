@@ -23,9 +23,8 @@ class representing the SMET format file for weather station data
 
 Detailed information about SMET format is described in \url{https://models.slf.ch/docserver/meteoio/SMET_specifications.pdf}.
 Not all features of the SMET format are implemented:
-* lines have to be separated by LF or CRLF
 * no binary data
-* only numeric data except for timestamp are supported
+* only numeric data are supported, except for timestamp
 * no comments within the [DATA] section.
 }
 \note{
