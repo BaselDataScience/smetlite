@@ -45,4 +45,29 @@
 #' showClass("smet")
 #'
 
-setClass("smet", slots = c(signature="character", header="list", data="data.frame", file="character"))
+setClass("smet",
+         slots = c(signature="character",
+                   header="list",
+                   data="data.frame",
+                   file="character"),
+         prototype = list(signature='', header=list(), data=data.frame(), file='')
+         )
+
+setGeneric("signature", function(x) standardGeneric('signature'))
+setMethod("signature", "smet", function(x) x@signature)
+setGeneric("header", function(x) standardGeneric('header'))
+setMethod("header", "smet", function(x) x@header)
+setGeneric("data", function(x) standardGeneric('data'))
+setMethod("data", "smet", function(x) x@data)
+setGeneric("source", function(x) standardGeneric('source'))
+setMethod("source", "smet", function(x) x@file)
+
+smet <- function(file, signature='SMET 1.1 ASCII', header=list(), data=data.frame()) {
+  methods::new(signature=signature, header=header, data=data, file=file)
+}
+
+setValidity('smet', function(object) {
+  if (stringr::str_split_fixed(stringr::str_squish(signature(object)), '\\s', n=3)[[3]]
+      != 'ASCII')
+    return('Only SMET files in ASCII format are accepted')
+})
