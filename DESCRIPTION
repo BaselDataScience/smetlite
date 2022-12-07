@@ -13,6 +13,6 @@ Imports:
     lubridate,
     methods,
     readr,
-    stringr,
-    tinytest
+    stringr
 RoxygenNote: 7.2.2
+Suggests: tinytest

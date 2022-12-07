@@ -10,15 +10,15 @@ Class \code{smet}
 \details{
 class representing the SMET format file for weather station data
  \describe{
-    \item{\code{signature}:}{A charachter string containing SMET signature}
+    \item{\code{signature}:}{A charachter string containing SMET signature: SMET <version> [ASCII|BINARY]}
 
     \item{\code{header}:}{Object of class \code{"list"} containing the Header Section,
-     each key corresponds to an appropriately named element of the list.}
+     each key corresponds to a correspondingly named element of the list.}
     \item{\code{data}:}{A \code{"data.frame"} containing the weather data values.
      The datetime field is called \code{"timestamp"} and stored in \code{\link{POSIXct}} format.}
 
-	   \item{\code{file}:}{source. Either full name of the SMET file
-	    or other source description like an url.}
+	   \item{\code{origin}:}{Either full name of the original SMET file
+	    or other description like an url.}
  }
 
 Detailed information about SMET format is described in \url{https://models.slf.ch/docserver/meteoio/SMET_specifications.pdf}.

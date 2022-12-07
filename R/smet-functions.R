@@ -6,8 +6,8 @@ read_smet <- function(filename) {
   smet_version <- tmp[1]
 
   # determine line number of section headers
-  i_data <- grep('^\\[DATA\\]$', tmp)
-  i_header <- grep('^\\[HEADER\\]$', tmp)
+  i_data <- grep('^\\[DATA\\]', tmp)
+  i_header <- grep('^\\[HEADER\\]', tmp)
   # work on smet header
   tmp <- tmp[(i_header+1):(i_data-1)]
   tmp <- sub('[;#].*', '', tmp)
@@ -38,7 +38,7 @@ read_smet <- function(filename) {
   col_types <- structure(rep(list(readr::col_double()), each=length(header$fields)),
                          names = header$fields)
   col_types$timestamp <- readr::col_datetime()
-  dat <- readr::read_delim(filename, skip = i_data,
+  dat <- readr::read_table(filename, skip = i_data,
                            col_names = header$fields,
                            col_types = col_types,
                            na = header$nodata)
