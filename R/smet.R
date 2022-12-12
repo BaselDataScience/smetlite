@@ -56,6 +56,9 @@ read_smet <- function(filename) {
   # convert timestamp to UTC timezone
   if (!is.null(header$tz)) dat$timestamp <- dat$timestamp - header$tz * 3600
 
+  # make sure nodata is interpreted as NA
+  dat[dat==as.numeric(header$nodata)] <- NA
+
   # back to MKSA units
   for (i in seq_along(header$units_multiplier)) {
     if (header$units_multiplier[i] != '1') dat[, i] <- as.numeric(header$units_multiplier[i]) * dat[,i]
