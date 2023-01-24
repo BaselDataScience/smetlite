@@ -74,3 +74,15 @@ read_smet <- function(filename) {
   attr(dat, 'class') <- c('smet', attr(dat, 'class', exact = TRUE))
   dat
 }
+
+#' retrieve header
+#'
+#' @param smet object of class smet
+#'
+#' @return named list of header information
+#' @export
+#'
+#' @examples header(read_smet(system.file('examples/test.smet', package = 'smetlite')))
+header <- function(smet) {
+  attr(smet, 'header')
+}
