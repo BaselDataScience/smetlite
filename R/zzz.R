@@ -1,5 +1,7 @@
-# list of permissible tiem and measurement variables
-legend <- list(
+#' list of permissible time and measurement variables
+#' @source <https://models.slf.ch/docserver/meteoio/SMET_specifications.pdf>
+#' @export
+smet_dict <- list(
   P="Air pressure, in Pa",
   TA="Temperature Air, in Kelvin",
   TSS="Temperature Snow Surface, in Kelvin",
