@@ -8,7 +8,7 @@
 <meta name="description" content="Simple class to hold contents of a SMET file as specified in 
     https://models.slf.ch/docserver/meteoio/SMET_specifications.pdf.
     There numerical meteorological measurements are all based on MKS (SI) units
-    and time stamp is standardized to UTC time. ">
+    and timestamp is standardized to UTC time. ">
 <title>Read and Write SMET Files • smetlite</title>
 <script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="deps/bootstrap-5.2.2/bootstrap.min.css" rel="stylesheet">
@@ -18,7 +18,7 @@
 <meta property="og:description" content="Simple class to hold contents of a SMET file as specified in 
     https://models.slf.ch/docserver/meteoio/SMET_specifications.pdf.
     There numerical meteorological measurements are all based on MKS (SI) units
-    and time stamp is standardized to UTC time. ">
+    and timestamp is standardized to UTC time. ">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -32,7 +32,7 @@
     
     <a class="navbar-brand me-2" href="index.html">smetlite</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.2</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.3</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,7 +60,7 @@
 <div class="page-header"><h1 id="smetlite">smetlite<a class="anchor" aria-label="anchor" href="#smetlite"></a>
 </h1></div>
 <!-- badges: start -->
-<!-- badges: end -->
+
 <p>The goal of smetlite is to ease working with SMET files from meteorology. The specification of these files you find in <a href="https://models.slf.ch/docserver/meteoio/SMET_specifications.pdf" class="external-link uri">https://models.slf.ch/docserver/meteoio/SMET_specifications.pdf</a>.</p>
 <p>A few short example smet files are included in the package; real life examples you can for instance download from <a href="https://www.envidat.ch/dataset/38112bee-f865-4b29-ba19-47a99ba78833/resource/3074d1dc-6083-4025-9ac4-484cfa88658b/download/wfj_optimaldataset_v7.smet" class="external-link uri">https://www.envidat.ch/dataset/38112bee-f865-4b29-ba19-47a99ba78833/resource/3074d1dc-6083-4025-9ac4-484cfa88658b/download/wfj_optimaldataset_v7.smet</a> or <a href="https://www.envidat.ch/dataset/a9264e9f-ea9b-4c89-b471-464efb891826/resource/a5918c50-6716-4dcf-b462-e1970ae1e072/download/wfj.smet" class="external-link uri">https://www.envidat.ch/dataset/a9264e9f-ea9b-4c89-b471-464efb891826/resource/a5918c50-6716-4dcf-b462-e1970ae1e072/download/wfj.smet</a>.</p>
 <p>Suggestions for useful extension of this tiny package are very welcome!</p>
@@ -104,7 +104,12 @@
 </ul>
 </div>
 
-
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://github.com/baselr/smetlite/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/baselr/smetlite/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
+</ul>
+</div>
 
   </aside>
 </div>
