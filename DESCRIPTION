@@ -1,7 +1,7 @@
 Package: smetlite
 Type: Package
 Title: Read and Write SMET Files
-Version: 0.2.4
+Version: 0.2.5
 Authors@R: person(given = "Reinhold",
              family = "Koch",
              role = c("aut", "cre"),

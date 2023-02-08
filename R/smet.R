@@ -37,8 +37,8 @@ read_smet <- function(filename) {
 
   # convert numeric coordinates
   for (x in intersect(c('altitude', 'easting', 'latitude', 'longitude', 'northing',
-                        'tz', 'units_multiplier', 'units_offset'), nm))
-    header[[x]] <- as.numeric(header[[x]])
+                        'tz', 'units_multiplier', 'units_offset', 'nodata'), nm))
+    header[[x]] <- vapply(str2expression(header[[x]]), eval, double(1))
   if (!is.null(header$epsg)) header$epsg <- as.integer(header$epsg)
 
 
@@ -50,24 +50,22 @@ read_smet <- function(filename) {
                            skip = i_data,
                            col_names = header$fields,
                            col_types = col_types,
-                           locale = readr::locale(tz='UTC'),
-                           na = header$nodata)
+                           locale = readr::locale(tz='UTC')
+                           )
 
   # convert timestamp to UTC timezone
   if (!is.null(header$tz)) dat$timestamp <- dat$timestamp - header$tz * 3600
 
   # make sure nodata is interpreted as NA
-  dat[dat==as.numeric(header$nodata)] <- NA
+  dat[dat==header$nodata] <- NA
 
   # back to MKSA units
-  for (i in seq_along(header$units_multiplier)) {
-    if (header$units_multiplier[i] != '1') dat[, i] <- as.numeric(header$units_multiplier[i]) * dat[,i]
-  }
-  for (i in seq_along(header$units_offset)) {
-    if (header$units_offset[i] != '0') dat[, i] <- as.numeric(header$units_offset[i]) + dat[,i]
-  }
+  adj_mult <- header$units_multiplier != 1
+  dat[, adj_mult] <- dat[, adj_mult] * rep(header$units_multiplier[adj_mult], each=nrow(dat))
+  adj_add <- header$units_offset != 0
+  dat[, adj_add] <- dat[, adj_add] + rep(header$units_offset[adj_add], each=nrow(dat))
 
-  # remove row.names attribute and attach metadata as attributes
+  # attach metadata as attributes
   attr(dat, 'signature') <- smet_version
   attr(dat, 'header') <- header
   attr(dat, 'file') <- filename
