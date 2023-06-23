@@ -13,7 +13,8 @@
   \item{TSG}{Temperature Surface Ground, in Kelvin}
   \item{RH}{Relative Humidity, between 0 and 1}
   \item{VW_MAX}{Maximum wind velocity, in m/s}
-  \item{VW}{Velocity Wind, in m/s DW Direction Wind, in degrees, clockwise and north being zero degrees}
+  \item{VW}{Velocity Wind, in m/s}
+  \item{DW}{Direction Wind, in degrees, clockwise and north being zero degrees}
   \item{ISWR}{Incoming Short Wave Radiation, in W/m2}
   \item{OSWR}{Reflected Short Wave Radiation, in W/m2}
   \item{ILWR}{Incoming Long Wave Radiation, in W/m2}
