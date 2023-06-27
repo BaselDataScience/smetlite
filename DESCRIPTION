@@ -1,13 +1,13 @@
 Package: smetlite
 Type: Package
 Title: Read and Write SMET Files
-Version: 0.2.8
+Version: 0.2.9
 Authors@R: person(given = "Reinhold",
              family = "Koch",
              role = c("aut", "cre", "cph"),
              email = "rei@reinholdkoch.com")
-Description: Simple class to hold contents of a SMET file as specified in 
-    <https://code.wsl.ch/snow-models/meteoio/-/blob/master/doc/SMET_specifications.pdf>.
+Description: Simple class to hold contents of a SMET file as specified in
+    Bavay (2021) <https://code.wsl.ch/snow-models/meteoio/-/blob/master/doc/SMET_specifications.pdf>.
     There numerical meteorological measurements are all based on MKS (SI) units
     and timestamp is standardized to UTC time. 
 License: GPL (>= 3)
