@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://baselr.github.io/smetlite/404.html</loc>
+    <loc>https://baseldatascience.github.io/smetlite/404.html</loc>
   </url>
   <url>
-    <loc>https://baselr.github.io/smetlite/LICENSE.html</loc>
+    <loc>https://baseldatascience.github.io/smetlite/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://baselr.github.io/smetlite/authors.html</loc>
+    <loc>https://baseldatascience.github.io/smetlite/authors.html</loc>
   </url>
   <url>
-    <loc>https://baselr.github.io/smetlite/index.html</loc>
+    <loc>https://baseldatascience.github.io/smetlite/index.html</loc>
   </url>
   <url>
-    <loc>https://baselr.github.io/smetlite/news/index.html</loc>
+    <loc>https://baseldatascience.github.io/smetlite/news/index.html</loc>
   </url>
   <url>
-    <loc>https://baselr.github.io/smetlite/reference/header.html</loc>
+    <loc>https://baseldatascience.github.io/smetlite/reference/header.html</loc>
   </url>
   <url>
-    <loc>https://baselr.github.io/smetlite/reference/index.html</loc>
+    <loc>https://baseldatascience.github.io/smetlite/reference/index.html</loc>
   </url>
   <url>
-    <loc>https://baselr.github.io/smetlite/reference/read_smet.html</loc>
+    <loc>https://baseldatascience.github.io/smetlite/reference/read_smet.html</loc>
   </url>
   <url>
-    <loc>https://baselr.github.io/smetlite/reference/smet_dict.html</loc>
+    <loc>https://baseldatascience.github.io/smetlite/reference/smet_dict.html</loc>
   </url>
   <url>
-    <loc>https://baselr.github.io/smetlite/reference/test_smet.html</loc>
+    <loc>https://baseldatascience.github.io/smetlite/reference/test_smet.html</loc>
   </url>
 </urlset>
