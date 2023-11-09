@@ -2,7 +2,7 @@
 # smetlite
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/baselr/smetlite/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/baselr/smetlite/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/baseldatascience/smetlite/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/baseldatascience/smetlite/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of smetlite is to ease working with SMET files from meteorology.
@@ -22,7 +22,7 @@ You can install the development version of smetlite from [GitHub](https://github
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("baselr/smetlite")
+devtools::install_github("baseldatascience/smetlite")
 ```
 
 ## Example
