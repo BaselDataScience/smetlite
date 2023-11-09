@@ -1,7 +1,7 @@
 Package: smetlite
 Type: Package
 Title: Read and Write SMET Files
-Version: 0.2.9
+Version: 0.2.10
 Authors@R: person(given = "Reinhold",
              family = "Koch",
              role = c("aut", "cre", "cph"),
@@ -17,7 +17,7 @@ Imports:
     stringr
 RoxygenNote: 7.2.3
 Suggests: tinytest
-URL: https://baselr.github.io/smetlite/
+URL: https://github.com/BaselDataScience/smetlite, https://baseldatascience.github.io/smetlite/
 Depends: 
     R (>= 3.5.0)
 LazyData: true
